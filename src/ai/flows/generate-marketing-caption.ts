@@ -41,12 +41,12 @@ const generateMarketingCaptionPrompt = ai.definePrompt({
   output: {schema: GenerateMarketingCaptionOutputSchema},
   prompt: `You are an AI marketing assistant specializing in creating engaging social media content.
 
-  Based on the uploaded marketing photo, generate a caption and a list of hashtags that are relevant to the image and can help increase audience reach.
+  Based on the uploaded marketing photo, generate a caption and a list of relevant hashtags to increase audience reach.
 
   Photo: {{media url=photoDataUri}}
 
   Caption: A creative and engaging caption for the photo.
-  Hashtags: A list of relevant hashtags that can help increase audience reach. The hashtags should be in array of string.`, // Modified prompt to request array of hashtags
+  Hashtags: An array of relevant hashtags.`,
 });
 
 const generateMarketingCaptionFlow = ai.defineFlow(
